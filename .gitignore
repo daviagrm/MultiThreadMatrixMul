@@ -1,0 +1,18 @@
+# Pastas de build (CMake / CLion)
+build/
+cmake-build-*/
+
+# IDEs
+.idea/
+.vscode/
+
+# Binarios e objetos
+*.exe
+*.o
+*.obj
+*.out
+*.a
+*.so
+*.dll
+sequencial
+paralelo
