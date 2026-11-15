@@ -95,6 +95,16 @@ O tempo é medido com `gettimeofday` e exibido em microssegundos e milissegundos
 
 Para comparar as versões, compile em modo **Release** (`-O2`): no modo Debug, sem otimização, os tempos não representam bem o desempenho real. Como o tempo varia entre execuções, rode cada caso algumas vezes e use a média.
 
+## Testes de desempenho (OpenMP)
+
+```bash
+sudo apt install -y python3-matplotlib   # uma vez
+bash scripts/benchmark_openmp.sh          # mede e grava resultados/openmp.csv
+python3 scripts/graficos_openmp.py        # gera tabela e gráficos
+```
+
+Análise: [`resultados/ANALISE_OPENMP.md`](resultados/ANALISE_OPENMP.md).
+
 ## Estrutura
 
 ```text
@@ -103,5 +113,7 @@ Para comparar as versões, compile em modo **Release** (`-O2`): no modo Debug, s
 ├── main.c           # versão paralela (pthreads)
 ├── openmp.c         # versão paralela (OpenMP)
 ├── sequencial.c     # versão sequencial
+├── scripts/         # testes de desempenho
+├── resultados/      # tempos, gráficos e análise
 └── README.md
 ```
