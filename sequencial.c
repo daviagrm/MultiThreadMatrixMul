@@ -42,11 +42,15 @@ int main(int argc, char* argv[]) {
     //medindo tempo
     gettimeofday(&start, NULL);
 
+    //Acumula numa variavel local (como nas versoes paralelas), para que a
+    //comparacao de tempos meça so o efeito do paralelismo.
     for (i = 0; i < tam; i++) {
         for (j = 0; j < tam; j++) {
+            int acumulador = 0;
             for (int x = 0; x < tam; x++) {
-                prod[i * tam + j] += m1[i * tam + x] * m2[x * tam + j];
+                acumulador += m1[i * tam + x] * m2[x * tam + j];
             }
+            prod[i * tam + j] = acumulador;
         }
     }
 
