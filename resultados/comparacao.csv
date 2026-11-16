@@ -1,0 +1,19 @@
+tamanho,versao,melhor_tempo_ms,melhor_kernel_ms,configuracao,speedup_seq
+10,Sequencial,0.0004,,1 thread,1.000
+10,pthreads,0.1460,,2 threads,0.003
+10,OpenMP,0.0040,,1 thread,0.100
+10,CUDA (RTX 4060 Laptop),0.2066,0.0109,blocos 16x16,0.002
+10,OpenCL (RTX 4060 Laptop),0.1117,0.0176,blocos 16x16,0.004
+10,OpenCL (Arc Graphics),0.0504,0.0060,blocos 16x16,0.008
+100,Sequencial,0.3710,,1 thread,1.000
+100,pthreads,0.2945,,4 threads,1.260
+100,OpenMP,0.2298,,4 threads,1.614
+100,CUDA (RTX 4060 Laptop),0.2882,0.0123,blocos 32x32,1.287
+100,OpenCL (RTX 4060 Laptop),0.1186,0.0194,blocos 8x8,3.128
+100,OpenCL (Arc Graphics),0.1016,0.0468,blocos 8x8,3.652
+1000,Sequencial,422.0430,,1 thread,1.000
+1000,pthreads,148.1236,,4 threads,2.849
+1000,OpenMP,94.3602,,16 threads,4.473
+1000,CUDA (RTX 4060 Laptop),4.7446,2.6512,blocos 16x16,88.952
+1000,OpenCL (RTX 4060 Laptop),3.9013,2.6211,blocos 16x16,108.180
+1000,OpenCL (Arc Graphics),12.3593,11.4655,blocos 8x8,34.148
